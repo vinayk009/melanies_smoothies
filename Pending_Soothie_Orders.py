@@ -12,7 +12,7 @@ from snowflake.snowpark.functions import col, when_matched
 st.title(f"Orders Devlivered Check :cup_with_straw:")
 st.write("""Check the **Orders**""")
 
-session = get_active_session()
+session = get_session()
 my_dataframe = session.table("smoothies.public.orders").filter(col("ORDER_FILLED")==0).collect()
 
 if my_dataframe:
