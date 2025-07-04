@@ -1,6 +1,6 @@
 #Import python packages
 import streamlit as st
-from snowflake.snowpark.context import Session
+from snowflake.snowpark import Session
 @st.cache_resource
 def get_session():
   return Session.builder.configs(st.secrets).create()
