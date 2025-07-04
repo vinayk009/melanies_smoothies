@@ -1,6 +1,9 @@
 #Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
+from snowflake.snowpark.context import Session
+@st.cache_resource
+def get_session():
+  return Session.builder.configs(st.secrets).create()
 from snowflake.snowpark.functions import col, when_matched
 
 
