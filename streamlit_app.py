@@ -43,7 +43,7 @@ if ingredients_list:
         
         st.subheader(fruit_chosen + ' Nutrition Information')
         smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/all" + search_on)
-        fvv = pd.DataFrame(fruityvice_response.json(), columns = ['nutritions'])
+        fvv = pd.DataFrame(smoothiefroot_response.json(), columns = ['nutritions'])
         
        # st.write(fv)
        # st.write(fvv)
