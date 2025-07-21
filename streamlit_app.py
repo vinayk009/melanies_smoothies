@@ -47,7 +47,7 @@ if ingredients_list:
         fvv = pd.DataFrame(smoothiefroot_response.json(), columns = ['nutritions'])
         
        # st.write(fv)
-       # st.write(fvv)
+        st.write(fvv)
         components.html(fvv.to_html(header=False))
 
     #st.write(ingredients_string)
